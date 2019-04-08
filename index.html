@@ -1,12 +1,32 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="UTF-8">
-<title>Title of the document</title>
-</head>
-
-<body>
-Content of the document......
-</body>
-
+    <head>
+        <script>
+            function prueba(){
+                var user=document.getElementById("us");
+                var pass=document.getElementById("ps");
+                if(user.value=="admin"){
+                    if(pass.value=="123"){
+                        alert("Logged in!");
+                        window.location = 'Loggedin.html';
+                    }
+                    else{
+                        alert("Not logged in");
+                    }
+                }
+                else {
+                    alert("Not logged in");
+                }
+            }
+        </script>
+        <body>
+            <div>Ingrese su usuario</div>
+            <input type="text" value="" id="us"\>
+            <br>
+            <div>Ingrese su contraseña</div>
+            <input type="password" value="" id="ps"\>
+            <br>
+            <input type="button" id="bt" value="Login" onclick="prueba()">
+        </body>
+    </head>
 </html>
